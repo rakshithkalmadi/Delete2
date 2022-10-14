@@ -1,0 +1,158 @@
+[debug] [2022-10-14T17:48:56.816Z] ----------------------------------------------------------------------
+[debug] [2022-10-14T17:48:56.817Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\raksh\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2022-10-14T17:48:56.817Z] CLI Version:   11.14.3
+[debug] [2022-10-14T17:48:56.817Z] Platform:      win32
+[debug] [2022-10-14T17:48:56.817Z] Node Version:  v18.10.0
+[debug] [2022-10-14T17:48:56.818Z] Time:          Fri Oct 14 2022 23:18:56 GMT+0530 (India Standard Time)
+[debug] [2022-10-14T17:48:56.818Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-10-14T17:48:56.822Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-10-14T17:48:56.822Z] > authorizing via signed-in user (rakshithkalmadi@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  D:\Projects\Delete2
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2022-10-14T17:49:10.526Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2022-10-14T17:49:11.332Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2022-10-14T17:49:11.333Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Using project exampleproj-f376c (ExampleProj) 
+[info] 
+=== Firestore Setup
+[debug] [2022-10-14T17:49:12.613Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/exampleproj-f376c/services/firestore.googleapis.com [none]
+[debug] [2022-10-14T17:49:12.613Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/exampleproj-f376c/services/firestore.googleapis.com x-goog-quota-user=projects/exampleproj-f376c
+[debug] [2022-10-14T17:49:14.601Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/exampleproj-f376c/services/firestore.googleapis.com 200
+[debug] [2022-10-14T17:49:14.601Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/exampleproj-f376c/services/firestore.googleapis.com [omitted]
+[debug] [2022-10-14T17:49:14.602Z] >>> [apiv2][query] GET https://appengine.googleapis.com/v1/apps/exampleproj-f376c [none]
+[debug] [2022-10-14T17:49:15.307Z] <<< [apiv2][status] GET https://appengine.googleapis.com/v1/apps/exampleproj-f376c 200
+[debug] [2022-10-14T17:49:15.307Z] <<< [apiv2][body] GET https://appengine.googleapis.com/v1/apps/exampleproj-f376c {"name":"apps/exampleproj-f376c","id":"exampleproj-f376c","authDomain":"gmail.com","locationId":"us-central","codeBucket":"staging.exampleproj-f376c.appspot.com","servingStatus":"SERVING","defaultHostname":"exampleproj-f376c.uc.r.appspot.com","defaultBucket":"exampleproj-f376c.appspot.com","serviceAccount":"exampleproj-f376c@appspot.gserviceaccount.com","gcrDomain":"us.gcr.io","databaseType":"CLOUD_FIRESTORE","featureSettings":{"splitHealthChecks":true,"useContainerOptimizedOs":true}}
+[debug] [2022-10-14T17:49:15.307Z] database_type: CLOUD_FIRESTORE
+[debug] [2022-10-14T17:49:15.308Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-10-14T17:49:15.308Z] > authorizing via signed-in user (rakshithkalmadi@gmail.com)
+[debug] [2022-10-14T17:49:15.308Z] [iam] checking project exampleproj-f376c for permissions ["firebase.projects.get"]
+[debug] [2022-10-14T17:49:15.308Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/exampleproj-f376c:testIamPermissions [none]
+[debug] [2022-10-14T17:49:15.309Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/exampleproj-f376c:testIamPermissions x-goog-quota-user=projects/exampleproj-f376c
+[debug] [2022-10-14T17:49:15.309Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/exampleproj-f376c:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2022-10-14T17:49:16.945Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/exampleproj-f376c:testIamPermissions 200
+[debug] [2022-10-14T17:49:16.945Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/exampleproj-f376c:testIamPermissions {"permissions":["firebase.projects.get"]}
+[info] 
+[info] Firestore Security Rules allow you to define how and when to allow
+[info] requests. You can keep these rules in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[debug] [2022-10-14T17:49:19.757Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/exampleproj-f376c/releases pageSize=10&pageToken=
+[debug] [2022-10-14T17:49:21.580Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/exampleproj-f376c/releases 200
+[debug] [2022-10-14T17:49:21.581Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/exampleproj-f376c/releases {"releases":[{"name":"projects/exampleproj-f376c/releases/cloud.firestore","rulesetName":"projects/exampleproj-f376c/rulesets/a52125df-24a7-4de8-8060-33170b31aa17","createTime":"2022-10-14T16:54:29.894270Z","updateTime":"2022-10-14T16:54:29.894270Z"}]}
+[debug] [2022-10-14T17:49:21.581Z] Found ruleset: projects/exampleproj-f376c/rulesets/a52125df-24a7-4de8-8060-33170b31aa17
+[debug] [2022-10-14T17:49:21.581Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/exampleproj-f376c/rulesets/a52125df-24a7-4de8-8060-33170b31aa17 [none]
+[debug] [2022-10-14T17:49:23.078Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/exampleproj-f376c/rulesets/a52125df-24a7-4de8-8060-33170b31aa17 200
+[debug] [2022-10-14T17:49:23.078Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/exampleproj-f376c/rulesets/a52125df-24a7-4de8-8060-33170b31aa17 [omitted]
+[info] 
+[info] Firestore indexes allow you to perform complex queries while
+[info] maintaining performance that scales with the size of the result
+[info] set. You can keep index definitions in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[debug] [2022-10-14T17:49:23.761Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/exampleproj-f376c/databases/(default)/collectionGroups/-/indexes [none]
+[debug] [2022-10-14T17:49:23.763Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/exampleproj-f376c/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false [none]
+[debug] [2022-10-14T17:49:25.571Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/exampleproj-f376c/databases/(default)/collectionGroups/-/indexes 200
+[debug] [2022-10-14T17:49:25.571Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/exampleproj-f376c/databases/(default)/collectionGroups/-/indexes {}
+[debug] [2022-10-14T17:49:26.624Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/exampleproj-f376c/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false 200
+[debug] [2022-10-14T17:49:26.625Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/exampleproj-f376c/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false {"fields":[{"name":"projects/exampleproj-f376c/databases/(default)/collectionGroups/__default__/fields/*","indexConfig":{"indexes":[{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"ASCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"DESCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","arrayConfig":"CONTAINS"}],"state":"READY"}]}}]}
+[info] 
+=== Functions Setup
+[debug] [2022-10-14T17:49:26.627Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-10-14T17:49:26.628Z] > authorizing via signed-in user (rakshithkalmadi@gmail.com)
+[debug] [2022-10-14T17:49:26.628Z] [iam] checking project exampleproj-f376c for permissions ["firebase.projects.get"]
+[debug] [2022-10-14T17:49:26.628Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/exampleproj-f376c:testIamPermissions [none]
+[debug] [2022-10-14T17:49:26.628Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/exampleproj-f376c:testIamPermissions x-goog-quota-user=projects/exampleproj-f376c
+[debug] [2022-10-14T17:49:26.628Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/exampleproj-f376c:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2022-10-14T17:49:28.109Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/exampleproj-f376c:testIamPermissions 200
+[debug] [2022-10-14T17:49:28.109Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/exampleproj-f376c:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2022-10-14T17:49:28.110Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/exampleproj-f376c/services/cloudfunctions.googleapis.com [none]
+[debug] [2022-10-14T17:49:28.110Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/exampleproj-f376c/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/exampleproj-f376c
+[debug] [2022-10-14T17:49:28.113Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/exampleproj-f376c/services/runtimeconfig.googleapis.com [none]
+[debug] [2022-10-14T17:49:28.113Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/exampleproj-f376c/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/exampleproj-f376c
+[debug] [2022-10-14T17:49:29.903Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/exampleproj-f376c/services/runtimeconfig.googleapis.com 200
+[debug] [2022-10-14T17:49:29.903Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/exampleproj-f376c/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2022-10-14T17:49:29.980Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/exampleproj-f376c/services/cloudfunctions.googleapis.com 200
+[debug] [2022-10-14T17:49:29.980Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/exampleproj-f376c/services/cloudfunctions.googleapis.com [omitted]
+[info] 
+Detected existing codebase(s): default
+
+[info] 
+Overwriting codebase default...
+
+[info] +  Wrote functions/package.json 
+[info] +  Wrote functions/.eslintrc.js 
+[info] +  Wrote functions/index.js 
+[info] +  Wrote functions/.gitignore 
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2022-10-14T17:50:00.611Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/releases.json [none]
+[debug] [2022-10-14T17:50:00.751Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/releases.json 200
+[debug] [2022-10-14T17:50:00.751Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/releases.json {"current":{"version":"9.12.1","browserURL":"https://www.gstatic.com/firebasejs/9.12.1/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/9.12.1/firebase.tgz"},"live":{"version":"9.12","browserURL":"https://www.gstatic.com/firebasejs/live/9.12/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/live/9.12/firebase.tgz"},"components":{"analytics":"https://www.gstatic.com/firebasejs/9.12.1/firebase-analytics.js","app":"https://www.gstatic.com/firebasejs/9.12.1/firebase-app.js","app-check":"https://www.gstatic.com/firebasejs/9.12.1/firebase-app-check.js","auth":"https://www.gstatic.com/firebasejs/9.12.1/firebase-auth.js","auth/cordova":"https://www.gstatic.com/firebasejs/9.12.1/firebase-auth/cordova.js","auth/react-native":"https://www.gstatic.com/firebasejs/9.12.1/firebase-auth/react-native.js","functions":"https://www.gstatic.com/firebasejs/9.12.1/firebase-functions.js","firestore":"https://www.gstatic.com/firebasejs/9.12.1/firebase-firestore.js","firestore/lite":"https://www.gstatic.com/firebasejs/9.12.1/firebase-firestore/lite.js","installations":"https://www.gstatic.com/firebasejs/9.12.1/firebase-installations.js","storage":"https://www.gstatic.com/firebasejs/9.12.1/firebase-storage.js","performance":"https://www.gstatic.com/firebasejs/9.12.1/firebase-performance.js","remote-config":"https://www.gstatic.com/firebasejs/9.12.1/firebase-remote-config.js","messaging":"https://www.gstatic.com/firebasejs/9.12.1/firebase-messaging.js","messaging/sw":"https://www.gstatic.com/firebasejs/9.12.1/firebase-messaging/sw.js","database":"https://www.gstatic.com/firebasejs/9.12.1/firebase-database.js","firestore.memory":"https://www.gstatic.com/firebasejs/9.12.1/firebase-firestore.memory.js"}}
+[info] +  Wrote public/index.html 
+[info] 
+[info] i  Didn't detect a .git folder. Assuming D:\Projects\Delete2 is the project root. 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=343868499&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2022-10-14T17:50:03.987Z] >>> [apiv2][query] POST https://github.com/login/oauth/access_token [none]
+[debug] [2022-10-14T17:50:03.988Z] >>> [apiv2][body] POST https://github.com/login/oauth/access_token [stream]
+[debug] [2022-10-14T17:50:04.387Z] <<< [apiv2][status] POST https://github.com/login/oauth/access_token 200
+[debug] [2022-10-14T17:50:04.387Z] <<< [apiv2][body] POST https://github.com/login/oauth/access_token {"access_token":"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","token_type":"bearer","scope":"read:user,repo"}
+[debug] [2022-10-14T17:50:04.395Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2022-10-14T17:50:04.797Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2022-10-14T17:50:04.797Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"rakshithkalmadi","id":58518378,"node_id":"MDQ6VXNlcjU4NTE4Mzc4","avatar_url":"https://avatars.githubusercontent.com/u/58518378?v=4","gravatar_id":"","url":"https://api.github.com/users/rakshithkalmadi","html_url":"https://github.com/rakshithkalmadi","followers_url":"https://api.github.com/users/rakshithkalmadi/followers","following_url":"https://api.github.com/users/rakshithkalmadi/following{/other_user}","gists_url":"https://api.github.com/users/rakshithkalmadi/gists{/gist_id}","starred_url":"https://api.github.com/users/rakshithkalmadi/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/rakshithkalmadi/subscriptions","organizations_url":"https://api.github.com/users/rakshithkalmadi/orgs","repos_url":"https://api.github.com/users/rakshithkalmadi/repos","events_url":"https://api.github.com/users/rakshithkalmadi/events{/privacy}","received_events_url":"https://api.github.com/users/rakshithkalmadi/received_events","type":"User","site_admin":false,"name":"Rakshith Kalmadi","company":null,"blog":"www.rakshithkalmdi.live","location":"India","email":null,"hireable":null,"bio":null,"twitter_username":null,"public_repos":38,"public_gists":0,"followers":4,"following":3,"created_at":"2019-12-04T13:55:37Z","updated_at":"2022-10-10T13:47:48Z","private_gists":1,"total_private_repos":41,"owned_private_repos":41,"disk_usage":169977,"collaborators":1,"two_factor_authentication":false,"plan":{"name":"pro","space":976562499,"collaborators":0,"private_repos":9999}}
+[info] 
+[info] +  Success! Logged into GitHub as rakshithkalmadi 
+[info] 
+[debug] [2022-10-14T17:50:17.734Z] >>> [apiv2][query] GET https://api.github.com/repos/rak/actions/secrets/public-key type=owner
+[debug] [2022-10-14T17:50:18.115Z] <<< [apiv2][status] GET https://api.github.com/repos/rak/actions/secrets/public-key 404
+[debug] [2022-10-14T17:50:18.115Z] <<< [apiv2][body] GET https://api.github.com/repos/rak/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-10-14T17:50:18.716Z] >>> [apiv2][query] GET https://api.github.com/repos/rak/actions/secrets/public-key type=owner
+[debug] [2022-10-14T17:50:19.080Z] <<< [apiv2][status] GET https://api.github.com/repos/rak/actions/secrets/public-key 404
+[debug] [2022-10-14T17:50:19.080Z] <<< [apiv2][body] GET https://api.github.com/repos/rak/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-10-14T17:50:19.102Z] >>> [apiv2][query] GET https://api.github.com/repos/rak/actions/secrets/public-key type=owner
+[debug] [2022-10-14T17:50:19.265Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2022-10-14T17:50:19.448Z] <<< [apiv2][status] GET https://api.github.com/repos/rak/actions/secrets/public-key 404
+[debug] [2022-10-14T17:50:19.449Z] <<< [apiv2][body] GET https://api.github.com/repos/rak/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-10-14T17:50:19.453Z] >>> [apiv2][query] GET https://api.github.com/repos/rak/actions/secrets/public-key type=owner
+[debug] [2022-10-14T17:50:19.603Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2022-10-14T17:50:19.603Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-10-14T17:50:20.238Z] <<< [apiv2][status] GET https://api.github.com/repos/rak/actions/secrets/public-key 404
+[debug] [2022-10-14T17:50:20.238Z] <<< [apiv2][body] GET https://api.github.com/repos/rak/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-10-14T17:51:14.175Z] >>> [apiv2][query] GET https://api.github.com/repos/rakrakshithkalmadi/demo.git/actions/secrets/public-key type=owner
+[debug] [2022-10-14T17:51:14.532Z] <<< [apiv2][status] GET https://api.github.com/repos/rakrakshithkalmadi/demo.git/actions/secrets/public-key 404
+[debug] [2022-10-14T17:51:14.532Z] <<< [apiv2][body] GET https://api.github.com/repos/rakrakshithkalmadi/demo.git/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-10-14T17:51:15.536Z] >>> [apiv2][query] GET https://api.github.com/repos/rakrakshithkalmadi/demo.git/actions/secrets/public-key type=owner
+[debug] [2022-10-14T17:51:15.938Z] <<< [apiv2][status] GET https://api.github.com/repos/rakrakshithkalmadi/demo.git/actions/secrets/public-key 404
+[debug] [2022-10-14T17:51:15.938Z] <<< [apiv2][body] GET https://api.github.com/repos/rakrakshithkalmadi/demo.git/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-10-14T17:51:20.359Z] >>> [apiv2][query] GET https://api.github.com/repos/rakshithkalmadi/demo.git/actions/secrets/public-key type=owner
+[debug] [2022-10-14T17:51:20.698Z] <<< [apiv2][status] GET https://api.github.com/repos/rakshithkalmadi/demo.git/actions/secrets/public-key 404
+[debug] [2022-10-14T17:51:20.698Z] <<< [apiv2][body] GET https://api.github.com/repos/rakshithkalmadi/demo.git/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-10-14T17:51:21.318Z] >>> [apiv2][query] GET https://api.github.com/repos/rakshithkalmadi/demo.git/actions/secrets/public-key type=owner
+[debug] [2022-10-14T17:51:21.886Z] <<< [apiv2][status] GET https://api.github.com/repos/rakshithkalmadi/demo.git/actions/secrets/public-key 404
+[debug] [2022-10-14T17:51:21.886Z] <<< [apiv2][body] GET https://api.github.com/repos/rakshithkalmadi/demo.git/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
